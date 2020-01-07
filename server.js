@@ -7,31 +7,9 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const router = express.Router();
 var nodemailer = require("nodemailer");
-const creds = require("./config/config");
 
 // view engine
-
-// defining transport
-
-var transport = {
-  host: "smtp.gmail.com",
-  auth: {
-    user: creds.USER,
-    pass: creds.PASS
-  }
-};
-
-var transporter = nodemailer.createTransport(transport);
-
-transporter.verify((error, success) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Server is ready to take messages");
-  }
-});
 
 // server configuration
 const app = express();
@@ -56,6 +34,7 @@ app.use(
 // use the mailer route
 const mailer = require("./routes/mailer");
 
+app.use("/", mailer);
 app.use("/send", mailer);
 
 // Getting / Using routin
