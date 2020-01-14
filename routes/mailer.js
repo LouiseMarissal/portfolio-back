@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const creds = require("./../config/config");
 const nodemailer = require("nodemailer");
+const cors = require("cors");
 // defining transport
-
 var transport = {
   host: "smtp.gmail.com",
   auth: {
