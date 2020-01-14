@@ -4,11 +4,12 @@ const creds = require("./../config/config");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 // defining transport
+
 var transport = {
   host: "smtp.gmail.com",
   auth: {
-    user: creds.USER,
-    pass: creds.PASS
+    user: "marissal.louise@gmail.com",
+    pass: "250193Louise"
   }
 };
 
