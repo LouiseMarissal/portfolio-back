@@ -9,7 +9,7 @@ var transport = {
   host: "smtp.gmail.com",
   auth: {
     user: "marissal.louise@gmail.com",
-    pass: "250193Louise"
+    pass: "250193_Louise"
   }
 };
 

@@ -26,7 +26,8 @@ app.use((req, res, next) => {
 
   app.options("*", (req, res) => {
     // allowed XHR methods
-    res.header("Access-Control-Allow-Methods", "POST,OPTIONS");
+    res.header("Access-Control-Allow-Methods", "POST, OPTIONS");
+
     res.send();
   });
 });
